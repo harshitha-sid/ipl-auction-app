@@ -1,0 +1,43 @@
+[
+    {
+        "name": "MS Dhoni",
+        "type": "Wicketkeeper, Batsman",
+        "image": "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/57.png",
+        "runs": "1234",
+        "wickets": "345",
+        "catches": "123"
+    },
+    {
+      "name": "Virat Kohli",
+      "type": "Batsman",
+      "image": "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/2.png",
+      "runs": "1234",
+      "wickets": "345",
+      "catches": "123"
+    },
+    {
+      "name": "Rohit Sharma",
+      "type": "Batsman",
+      "image": "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/6.png",
+      "runs": "1234",
+      "wickets": "345",
+      "catches": "123"
+    },
+    {
+      "name": "Yuzvendra Chahal",
+      "type": "Bowler",
+      "image": "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/10.png",
+      "runs": "1234",
+      "wickets": "345",
+      "catches": "123"
+    },
+    {
+      "name": "Glenn Maxwell",
+      "type": "All Rounder",
+      "image": "https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/28.png",
+      "runs": "1234",
+      "wickets": "345",
+      "catches": "123"
+    }
+]
+  

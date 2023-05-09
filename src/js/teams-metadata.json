@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Chennai Super Kings",
+        "image": "../../img/CSK.png"
+    },
+    {
+        "name": "Royal Challengers Bangalore",
+        "image": "../../img/RCB.png"
+    },
+    {
+        "name": "Kolkata Knight Riders",
+        "image": "../../img/KKR.png"
+    },
+    {
+        "name": "Delhi Capitals",
+        "image": "../../img/DC.png"
+    },
+    {
+        "name": "Mumbai Indians",
+        "image": "../../img/MI.png"
+    },
+    {
+        "name": "Rajasthan Royals",
+        "image": "../../img/RR.png"
+    }
+]

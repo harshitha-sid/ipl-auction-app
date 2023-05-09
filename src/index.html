@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IPL Auction App</title>
+  <link href='https://fonts.googleapis.com/css?family=Lobster|Open+Sans:400,400italic,300italic,300|Raleway:300,400,600' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/toastr.min.css">
+  <link rel="stylesheet" type="text/css" href="css/animate.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+  <div class="content">
+    <div class="topnav">
+      <div class="logo-container">
+        <img src="../img/ipl-logo.png" alt="IPL Logo">
+      </div>
+      <div class="navheader">IPL 2023 Player Auction</div>
+      <div class="current_acc">Account: <span id="current_account"></span>
+      </div>
+    </div>
+    <button class="tablink" onclick="openPage('home', this, '#3399ff')" id="defaultOpen">Home</button>
+    <button class="tablink" onclick="openPage('to_be_auctioned', this, '#3399ff')">To Be Auctioned</button>
+    <button class="tablink" onclick="openPage('sold_players', this, '#3399ff')">Sold Players</button>
+    <button class="tablink" onclick="openPage('unsold_players', this, 'orange')">Unsold Players</button>
+    
+    <div id="home" class="tabcontent">
+      <div class="container wow fadeInUp delay-03s">
+        <div class="logo text-center">
+          <h2>Welcome to the IPL Auction !!</h2>
+          <br>
+          <div id="auction-buttons"></div>
+          <br>
+          <div id="grid-container"></div>
+        </div>
+      </div>
+    </div>
+    
+    <div id="to_be_auctioned" class="tabcontent">
+      <table id="player-table" class="players">
+        <thead>
+          <tr>
+            <th>Player</th>
+            <th>Name</th>
+            <th>Runs</th>
+            <th>Wickets</th>
+            <th>Catches</th>
+            <th>Baseprice (ETH)</th>
+            <th>Highest Bid (ETH)</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Table rows will be inserted here dynamically -->
+        </tbody>
+      </table>
+    </div>
+    
+    <div id="sold_players" class="tabcontent">
+      <table id="sold-player-table" class="players">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Runs</th>
+            <th>Wickets</th>
+            <th>Catches</th>
+            <th>Highest Bid (ETH)</th>
+            <th>Highest Bidder</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Table rows will be inserted here dynamically -->
+        </tbody>
+      </table>
+    </div>
+    
+    <div id="unsold_players" class="tabcontent">
+      <table id="unsold-player-table" class="players">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Runs</th>
+            <th>Wickets</th>
+            <th>Catches</th>
+            <th>Baseprice (ETH)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Table rows will be inserted here dynamically -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+  <script src="js/dist/jquery.min.js"></script>
+  <script src="js/dist/bootstrap.min.js"></script>
+  <script src="js/dist/jquery.countdown.min.js"></script>
+  <script src="js/dist/wow.js"></script>
+  <script src="js/dist/custom.js"></script>
+  <script src="js/dist/bootstrap.min.js"></script>
+  <script src="js/dist/toastr.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.37/dist/web3.min.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    function openPage(pageName,elmnt,color) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+      }
+      document.getElementById(pageName).style.display = "block";
+      elmnt.style.backgroundColor = color;
+    }
+    
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+    </script>
+</body>
+</html>
