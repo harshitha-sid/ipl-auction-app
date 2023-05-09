@@ -48,7 +48,7 @@ App = {
   initContract: async function () {
     let accs = await ethereum.request({method: 'eth_accounts'});
     console.log(accs);
-    $.getJSON('IPLAuction.json', function (data) {
+    $.getJSON('../build/contracts/IPLAuction.json', function (data) {
       App.contracts.ipl = new App.web3.eth.Contract(data.abi, App.address, {});
       App.currentAccount = accs[0];
       jQuery('#current_account').text(App.currentAccount);
