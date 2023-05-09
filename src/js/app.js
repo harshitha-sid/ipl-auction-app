@@ -60,7 +60,7 @@ App = {
   },
 
   populateAddress : function(){  
-    new Web3(App.url).eth.getAccounts((err, acc) => {
+    new Web3(Web3.givenProvider || App.url).eth.getAccounts((err, acc) => {
       App.accounts = acc;
       console.log("In populateAddress, App.accounts: ",App.accounts);
       console.log("In populateAddress, App.accounts.length: ",App.accounts.length);
@@ -286,7 +286,7 @@ App = {
   },
 
   populateTeams: async function (teamMap) {
-    new Web3(App.url).eth.getAccounts((err, acc) => {
+    new Web3(Web3.givenProvider || App.url).eth.getAccounts((err, acc) => {
       App.accounts = acc;
       console.log("In populateTeams, App.accounts: ", App.accounts);
       console.log("In populateTeams, App.accounts.length: ", App.accounts.length);
